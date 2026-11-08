@@ -1,0 +1,27 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "E-commerce CMS & leads — dataset",
+  "description": "One row per domain: CMS detection and extracted public contacts.",
+  "properties": {
+    "_type": {
+      "type": "string",
+      "description": "lead | error | offer"
+    },
+    "domain": { "type": "string" },
+    "url": { "type": "string" },
+    "cms": { "type": "string", "description": "WordPress | WooCommerce | Shopify | OpenCart | Bitrix | Tilda | Joomla | Magento | Unknown" },
+    "cmsConfidence": { "type": "string", "description": "high | medium | low" },
+    "title": { "type": ["string", "null"] },
+    "phones": { "type": "array", "items": { "type": "string" } },
+    "emails": { "type": "array", "items": { "type": "string" } },
+    "telegram": { "type": "array", "items": { "type": "string" } },
+    "vk": { "type": "array", "items": { "type": "string" } },
+    "whatsapp": { "type": "array", "items": { "type": "string" } },
+    "inn": { "type": "array", "items": { "type": "string" } },
+    "ogrn": { "type": "array", "items": { "type": "string" } },
+    "kpp": { "type": "array", "items": { "type": "string" } },
+    "sourceUrls": { "type": "array", "items": { "type": "string" } },
+    "checkedAt": { "type": "string" },
+    "error": { "type": ["string", "null"] }
+  }
+}

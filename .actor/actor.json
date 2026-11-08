@@ -1,0 +1,31 @@
+{
+  "actorSpecification": 1,
+  "name": "ecommerce-cms-and-seller-leads-extractor",
+  "title": "E-Commerce Store, CMS & B2B Contact Leads Extractor (WooCommerce, Shopify, WordPress)",
+  "description": "Detect CMS (WordPress, WooCommerce, Shopify, OpenCart, Bitrix, Tilda) for any store and extract public contacts — phones, emails, Telegram / VK / WhatsApp, INN / OGRN from footer — to a clean CSV/XLSX dataset. Sessionless, no login. Free tier + full B2B contacts base funnel (TW1-TG sellers audience).",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "categories": [
+    "BUSINESS",
+    "MARKETING",
+    "AUTOMATION"
+  ],
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "meta": {
+    "generatedBy": "9xj89gzrtw-hue/ecommerce-cms-leads-extractor",
+    "store": "https://9xj89gzrtw-hue.github.io/tg-chats/",
+    "platiLot": "https://plati.market/itm/6378375"
+  },
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 900,
+    "memoryMbytes": 512
+  },
+  "output": "./output_schema.json"
+}

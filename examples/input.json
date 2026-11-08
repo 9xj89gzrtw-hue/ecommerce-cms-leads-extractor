@@ -1,0 +1,5 @@
+{
+  "domains": ["example.com"],
+  "includeContactsPage": false,
+  "includeOffer": true
+}

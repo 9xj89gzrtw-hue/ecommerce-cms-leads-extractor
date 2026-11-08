@@ -1,0 +1,41 @@
+{
+  "name": "ecommerce-cms-leads-extractor",
+  "version": "1.0.0",
+  "description": "Apify Actor that detects e-commerce CMS and extracts public B2B contacts to a clean dataset.",
+  "type": "module",
+  "main": "src/run.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test",
+    "smoke": "node src/main.js --domains example.com --max-domains 1"
+  },
+  "keywords": [
+    "apify",
+    "apify-actor",
+    "ecommerce",
+    "wordpress",
+    "woocommerce",
+    "shopify",
+    "opencart",
+    "bitrix",
+    "tilda",
+    "cms-detect",
+    "leads",
+    "b2b",
+    "scraper",
+    "contacts"
+  ],
+  "author": "9xj89gzrtw-hue",
+  "license": "MIT",
+  "homepage": "https://9xj89gzrtw-hue.github.io/tg-chats/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9xj89gzrtw-hue/ecommerce-cms-leads-extractor.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "apify": "^3.2.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "E-commerce CMS & seller leads input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "domains": {
+      "title": "Domains or store URLs",
+      "type": "array",
+      "description": "List of domains or URLs to check (example.com or https://shop.example.ru). Each is fetched once (plus optional contacts page). Free tier: 50 domains per run, up to 500.",
+      "editor": "stringList",
+      "default": [],
+      "items": { "type": "string" }
+    },
+    "includeContactsPage": {
+      "title": "Also fetch /contacts",
+      "type": "boolean",
+      "description": "When true, each domain also fetches /contacts (best effort) and merges contacts found there.",
+      "default": true
+    },
+    "maxDomains": {
+      "title": "Max domains per run",
+      "type": "integer",
+      "description": "Hard cap. Free tier is 50.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "includeOffer": {
+      "title": "Include the offer record",
+      "type": "boolean",
+      "description": "Adds one final record promoting the full sellers chats base (TW1-TG) on Plati.Market.",
+      "default": true
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout (seconds)",
+      "type": "integer",
+      "description": "Per-URL HTTP timeout.",
+      "default": 15,
+      "minimum": 5,
+      "maximum": 60
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "actorSpecification": 1,
   "name": "ecommerce-cms-and-seller-leads-extractor",
   "title": "E-Commerce CMS & Seller Leads Extractor",
-  "description": "Detect CMS (WordPress, WooCommerce, Shopify, OpenCart, Bitrix, Tilda) for any store and extract public contacts — phones, emails, Telegram / VK / WhatsApp, INN / OGRN from footer — to a clean CSV/XLSX dataset. Sessionless, no login. Free tier + full B2B contacts base funnel (TW1-TG sellers audience).",
+  "description": "Detect CMS (WordPress, WooCommerce, Shopify, OpenCart, Bitrix, Tilda) and extract public contacts — phones, emails, Telegram / VK / WhatsApp, INN / OGRN — to CSV/XLSX. Sessionless, no login. Free tier + TW1-TG sellers funnel.",
   "version": "1.0",
   "buildTag": "latest",
   "input": "./INPUT_SCHEMA.json",

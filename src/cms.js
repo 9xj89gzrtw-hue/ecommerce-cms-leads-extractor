@@ -21,7 +21,7 @@ export function detectCms(html, headersText = "") {
 
   // Strong, specific markers first (order matters: WooCommerce is also WP).
   const rules = [
-    { cms: "WooCommerce", confidence: "high", test: () => /woocommerce|wp-content\/plugins\/woocommerce|wc-blocks/.test(both) },
+    { cms: "WooCommerce", confidence: "high", test: () => /wp-content\/plugins\/woocommerce|wc-blocks|woocommerce\.min\.|class="woocommerce/.test(both) },
     { cms: "Shopify", confidence: "high", test: () => /cdn\.shopify\.com|shopify\.theme|myshopify\.com|x-shopify/.test(both) },
     { cms: "WordPress", confidence: "high", test: () => /wp-content|wp-includes|wp-json|meta name="generator" content="wordpress/.test(both) },
     { cms: "OpenCart", confidence: "high", test: () => /catalog\/view|index\.php\?route=|opencart/.test(both) },
@@ -155,7 +155,8 @@ export function isValidOgrn(ogrn) {
 }
 
 export function extractInn(html) {
-  const re = /\b(\d{10}|\d{12})\b/g;
+  // Require a label (ИНН/INN) nearby — otherwise any JS number passes the checksum by chance.
+  const re = /(?:ИНН|INN|inn)[^\d]{0,24}?(\d{10}|\d{12})\b/gi;
   const found = new Set();
   let m;
   const text = String(html || "");
@@ -167,7 +168,7 @@ export function extractInn(html) {
 }
 
 export function extractOgrn(html) {
-  const re = /\b(\d{13})\b/g;
+  const re = /(?:ОГРН|OGRN|ogrn)[^\d]{0,24}?(\d{13})\b/gi;
   const found = new Set();
   let m;
   const text = String(html || "");
